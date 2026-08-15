@@ -1,102 +1,117 @@
 
-
 <!DOCTYPE html>
 <html>
 <head>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>A Little Surprise 💌</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>A Little Surprise 💌</title>
 
-  <style>
-    body {
-      margin: 0;
-      min-height: 100vh;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      text-align: center;
-      font-family: Arial, sans-serif;
-      background: #fff0f5;
-      color: #5a3040;
-    }
+<style>
+body {
+  margin: 0;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  font-family: Arial, sans-serif;
+  background: #fff0f5;
+  color: #5a3040;
+}
 
-    .box {
-      width: 85%;
-      max-width: 500px;
-      padding: 35px 20px;
-      background: white;
-      border-radius: 25px;
-      box-shadow: 0 10px 30px rgba(0,0,0,0.12);
-    }
+.box {
+  width: 85%;
+  max-width: 500px;
+  padding: 30px;
+}
 
-    h1 {
-      font-size: 32px;
-      margin-bottom: 15px;
-    }
+h1 {
+  font-size: 32px;
+}
 
-    p {
-      font-size: 20px;
-      line-height: 1.5;
-    }
+p {
+  font-size: 19px;
+}
 
-    button {
-      border: none;
-      padding: 14px 25px;
-      margin: 10px;
-      border-radius: 30px;
-      font-size: 18px;
-      cursor: pointer;
-    }
+.cat {
+  width: 180px;
+  margin: 10px auto;
+}
 
-    .yes {
-      background: #ff8fab;
-      color: white;
-    }
+button {
+  padding: 12px 24px;
+  margin: 8px;
+  border: none;
+  border-radius: 25px;
+  font-size: 17px;
+  cursor: pointer;
+  background: #ff8fab;
+  color: white;
+}
 
-    .no {
-      background: #f1d5df;
-      color: #5a3040;
-    }
-
-    #message {
-      margin-top: 20px;
-      font-weight: bold;
-    }
-  </style>
+button:hover {
+  transform: scale(1.05);
+}
+</style>
 </head>
 
 <body>
 
-  <div class="box">
+<div class="box">
 
-    <h1>Heyyy, Aisha! 💗</h1>
+  <div class="cat">
+    <svg viewBox="0 0 200 180" width="180">
+      <path d="M45 70 L30 25 L70 45
+               Q100 25 130 45 L170 25 L155 70
+               Q175 100 160 130
+               Q145 160 100 160
+               Q55 160 40 130
+               Q25 100 45 70Z"
+            fill="#f2c6a0"
+            stroke="#5a3040"
+            stroke-width="5"/>
 
-    <p>
-      I made a little surprise for you...
-    </p>
+      <circle cx="70" cy="90" r="7" fill="#5a3040"/>
+      <circle cx="130" cy="90" r="7" fill="#5a3040"/>
 
-    <p>
-      <b>Do you wanna see? 👀</b>
-    </p>
+      <path d="M92 110 Q100 118 108 110"
+            fill="none"
+            stroke="#5a3040"
+            stroke-width="4"/>
 
-    <button class="yes" onclick="sayYes()">YES 💗</button>
+      <path d="M55 75 L80 82"
+            stroke="#5a3040"
+            stroke-width="5"/>
 
-    <button class="no" onclick="sayNo()">NO 😭</button>
-
-    <p id="message"></p>
-
+      <path d="M145 75 L120 82"
+            stroke="#5a3040"
+            stroke-width="5"/>
+    </svg>
   </div>
 
-  <script>
-    function sayYes() {
-      document.getElementById("message").innerHTML =
-        "YAYYY! I knew you would say yes! 💌";
-    }
+  <h1>Heyyy! 💗</h1>
 
-    function sayNo() {
-      document.getElementById("message").innerHTML =
-        "😾 HOW DARE YOU SAY NO?! SAY YES!! 😭";
-    }
-  </script>
+  <p>I made a little surprise for you.</p>
+
+  <p><b>Do you wanna see? 👀</b></p>
+
+  <button onclick="sayYes()">YES 💗</button>
+
+  <button onclick="sayNo()">NO</button>
+
+  <p id="message"></p>
+
+</div>
+
+<script>
+function sayYes() {
+  document.getElementById("message").innerHTML =
+  "YAYYY! I knew you would say yes! 💌";
+}
+
+function sayNo() {
+  window.open("angry.html", "_blank");
+}
+</script>
 
 </body>
 </html>
