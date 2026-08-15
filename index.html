@@ -2,116 +2,101 @@
 <!DOCTYPE html>
 <html>
 <head>
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>A Little Surprise 💌</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Aisha's Surprise 💗</title>
 
-<style>
-body {
-  margin: 0;
-  min-height: 100vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-  font-family: Arial, sans-serif;
-  background: #fff0f5;
-  color: #5a3040;
-}
+  <style>
+    * {
+      box-sizing: border-box;
+    }
 
-.box {
-  width: 85%;
-  max-width: 500px;
-  padding: 30px;
-}
+    body {
+      margin: 0;
+      min-height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      font-family: Arial, sans-serif;
+      background: linear-gradient(135deg, #fff1f6, #ffe1ec);
+      color: #4d2635;
+    }
 
-h1 {
-  font-size: 32px;
-}
+    .card {
+      width: 88%;
+      max-width: 520px;
+      padding: 45px 25px;
+      background: rgba(255, 255, 255, 0.95);
+      border-radius: 30px;
+      box-shadow: 0 12px 35px rgba(100, 50, 70, 0.15);
+    }
 
-p {
-  font-size: 19px;
-}
+    .heart {
+      font-size: 55px;
+      margin-bottom: 10px;
+    }
 
-.cat {
-  width: 180px;
-  margin: 10px auto;
-}
+    h1 {
+      font-size: 34px;
+      margin: 10px 0;
+    }
 
-button {
-  padding: 12px 24px;
-  margin: 8px;
-  border: none;
-  border-radius: 25px;
-  font-size: 17px;
-  cursor: pointer;
-  background: #ff8fab;
-  color: white;
-}
+    .question {
+      font-size: 21px;
+      line-height: 1.6;
+      margin: 20px 0 30px;
+    }
 
-button:hover {
-  transform: scale(1.05);
-}
-</style>
+    button {
+      border: none;
+      padding: 15px 30px;
+      margin: 8px;
+      border-radius: 30px;
+      font-size: 18px;
+      font-weight: bold;
+      cursor: pointer;
+    }
+
+    .yes {
+      background: #ff78a5;
+      color: white;
+    }
+
+    .no {
+      background: #eeeeee;
+      color: #4d2635;
+    }
+  </style>
 </head>
 
 <body>
 
-<div class="box">
+  <div class="card">
 
-  <div class="cat">
-    <svg viewBox="0 0 200 180" width="180">
-      <path d="M45 70 L30 25 L70 45
-               Q100 25 130 45 L170 25 L155 70
-               Q175 100 160 130
-               Q145 160 100 160
-               Q55 160 40 130
-               Q25 100 45 70Z"
-            fill="#f2c6a0"
-            stroke="#5a3040"
-            stroke-width="5"/>
+    <div class="heart">💗</div>
 
-      <circle cx="70" cy="90" r="7" fill="#5a3040"/>
-      <circle cx="130" cy="90" r="7" fill="#5a3040"/>
+    <h1>Heyyy, Aisha!</h1>
 
-      <path d="M92 110 Q100 118 108 110"
-            fill="none"
-            stroke="#5a3040"
-            stroke-width="4"/>
+    <div class="question">
+      I made something special for you.<br>
+      <b>Do you wanna see it? 👀</b>
+    </div>
 
-      <path d="M55 75 L80 82"
-            stroke="#5a3040"
-            stroke-width="5"/>
+    <button class="yes" onclick="goToYes()">YES 💗</button>
 
-      <path d="M145 75 L120 82"
-            stroke="#5a3040"
-            stroke-width="5"/>
-    </svg>
+    <button class="no" onclick="goToNo()">NO</button>
+
   </div>
 
-  <h1>Heyyy! 💗</h1>
+  <script>
+    function goToYes() {
+      window.location.href = "yes.html";
+    }
 
-  <p>I made a little surprise for you.</p>
-
-  <p><b>Do you wanna see? 👀</b></p>
-
-  <button onclick="sayYes()">YES 💗</button>
-
-  <button onclick="sayNo()">NO</button>
-
-  <p id="message"></p>
-
-</div>
-
-<script>
-function sayYes() {
-  document.getElementById("message").innerHTML =
-  "YAYYY! I knew you would say yes! 💌";
-}
-
-function sayNo() {
-  window.open("angry.html", "_blank");
-}
-</script>
+    function goToNo() {
+      window.location.href = "no.html";
+    }
+  </script>
 
 </body>
 </html>
