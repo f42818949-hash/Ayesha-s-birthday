@@ -1,1 +1,34 @@
 
+<!DOCTYPE html>
+<html>
+<head>
+  <title>A Little Surprise 💌</title>
+</head>
+
+<body>
+
+  <h1>Heyyy! 💗</h1>
+
+  <p>I made a little surprise for you.</p>
+
+  <p><b>Do you wanna see? 👀</b></p>
+
+  <button onclick="sayYes()">YES 💗</button>
+  <button onclick="sayNo()">NO 😭</button>
+
+  <p id="message"></p>
+
+  <script>
+    function sayYes() {
+      document.getElementById("message").innerHTML =
+        "YAYYY! I knew you would say yes! 💌";
+    }
+
+    function sayNo() {
+      document.getElementById("message").innerHTML =
+        "😾 HOW DARE YOU SAY NO?! SAY YES!! 😭";
+    }
+  </script>
+
+</body>
+</html>
