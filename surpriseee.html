@@ -1,461 +1,437 @@
-
-    <!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>For My Aishu 💗</title>
 
-  <title>For My Aishu 💗</title>
+<style>
+*{box-sizing:border-box}
 
-  <style>
-    * {
-      box-sizing: border-box;
-    }
+body{
+  margin:0;
+  background:#fff4f8;
+  color:#5b3a46;
+  font-family:"Trebuchet MS",sans-serif;
+}
 
-    body {
-      margin: 0;
-      background: #fff4f8;
-      color: #5b3a46;
-      font-family: "Trebuchet MS", sans-serif;
-    }
+.header{
+  min-height:100vh;
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+  align-items:center;
+  text-align:center;
+  padding:30px;
+  background:linear-gradient(135deg,#ffe1ed,#fff7fa);
+}
 
-    .header {
-      min-height: 100vh;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-      text-align: center;
-      padding: 30px;
-      background: linear-gradient(135deg, #ffe1ed, #fff7fa);
-    }
+.heart{
+  font-size:75px;
+  animation:float 2s infinite ease-in-out;
+}
 
-    .heart {
-      font-size: 75px;
-      animation: float 2s infinite ease-in-out;
-    }
+@keyframes float{
+  0%,100%{transform:translateY(0)}
+  50%{transform:translateY(-10px)}
+}
 
-    @keyframes float {
-      0%, 100% {
-        transform: translateY(0);
-      }
+.header h1{
+  font-size:38px;
+  margin:15px 0 10px;
+}
 
-      50% {
-        transform: translateY(-10px);
-      }
-    }
+.header p{
+  font-size:18px;
+  max-width:500px;
+  line-height:1.7;
+}
 
-    .header h1 {
-      font-size: 38px;
-      margin: 15px 0 10px;
-    }
+.scroll{
+  margin-top:35px;
+  opacity:.7;
+}
 
-    .header p {
-      font-size: 18px;
-      max-width: 500px;
-      line-height: 1.7;
-    }
+.section{
+  padding:70px 20px;
+  max-width:900px;
+  margin:auto;
+}
 
-    .scroll {
-      margin-top: 35px;
-      font-size: 15px;
-      opacity: 0.7;
-    }
+.card{
+  background:white;
+  border-radius:28px;
+  padding:30px 25px;
+  margin-bottom:35px;
+  box-shadow:0 10px 30px rgba(120,70,90,.12);
+}
 
-    .section {
-      padding: 70px 20px;
-      max-width: 900px;
-      margin: auto;
-    }
+.number{
+  font-size:14px;
+  letter-spacing:2px;
+  color:#d77b9b;
+  font-weight:bold;
+}
 
-    .card {
-      background: white;
-      border-radius: 28px;
-      padding: 30px 25px;
-      margin-bottom: 35px;
-      box-shadow: 0 10px 30px rgba(120, 70, 90, 0.12);
-    }
+h2{
+  font-size:28px;
+  margin:10px 0 25px;
+}
 
-    .number {
-      font-size: 14px;
-      letter-spacing: 2px;
-      color: #d77b9b;
-      font-weight: bold;
-    }
+.story p,
+.card>p{
+  font-size:17px;
+  line-height:1.9;
+  margin-bottom:22px;
+}
 
-    h2 {
-      font-size: 28px;
-      margin: 10px 0 20px;
-    }
+.memory{
+  background:#fff0f5;
+  border-radius:22px;
+  padding:22px;
+  margin:22px 0;
+}
 
-    .story p,
-    .card > p {
-      font-size: 17px;
-      line-height: 1.9;
-      margin-bottom: 22px;
-    }
+.memory-title{
+  font-size:20px;
+  font-weight:bold;
+  margin-bottom:12px;
+}
 
-    .memory {
-      background: #fff0f5;
-      border-radius: 20px;
-      padding: 20px;
-      margin-top: 20px;
-      text-align: center;
-    }
+.memory p{
+  font-size:16px;
+  line-height:1.8;
+  margin:0;
+}
 
-    .memory span {
-      font-size: 45px;
-    }
+.special-note{
+  background:#fff0f5;
+  border-radius:20px;
+  padding:25px;
+  font-size:17px;
+  line-height:1.9;
+}
 
-    .memory p {
-      margin-bottom: 0;
-    }
+.screenshots{
+  display:grid;
+  grid-template-columns:repeat(2,1fr);
+  gap:15px;
+  margin-top:25px;
+}
 
-    .screenshots {
-      display: grid;
-      grid-template-columns: repeat(2, 1fr);
-      gap: 15px;
-      margin-top: 25px;
-    }
+.photo{
+  min-height:170px;
+  border-radius:18px;
+  background:#ffe5ee;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  text-align:center;
+  padding:15px;
+}
 
-    .photo {
-      min-height: 170px;
-      border-radius: 18px;
-      background: #ffe5ee;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      text-align: center;
-      padding: 15px;
-      font-size: 15px;
-    }
+.ending{
+  text-align:center;
+  padding:90px 25px;
+  background:linear-gradient(135deg,#ffe1ed,#fff7fa);
+}
 
-    .special-note {
-      background: #fff0f5;
-      border-radius: 20px;
-      padding: 25px;
-      margin-top: 20px;
-      font-size: 17px;
-      line-height: 1.9;
-    }
+.ending h2{
+  font-size:30px;
+}
 
-    .ending {
-      text-align: center;
-      padding: 90px 25px;
-      background: linear-gradient(135deg, #ffe1ed, #fff7fa);
-    }
+.ending p{
+  font-size:18px;
+  line-height:1.7;
+}
 
-    .ending h2 {
-      font-size: 30px;
-    }
-
-    .ending p {
-      font-size: 18px;
-      line-height: 1.7;
-    }
-
-    @media (max-width: 600px) {
-      .header h1 {
-        font-size: 30px;
-      }
-
-      .screenshots {
-        grid-template-columns: 1fr;
-      }
-    }
-  </style>
+@media(max-width:600px){
+  .header h1{font-size:30px}
+  .screenshots{grid-template-columns:1fr}
+}
+</style>
 </head>
 
 <body>
 
-  <!-- INTRO -->
+<div class="header">
+  <div class="heart">💗</div>
+  <h1>For My Aishu 🥹</h1>
+  <p>
+    Since you clicked that envelope,
+    I guess you're ready for everything
+    I've been wanting to say. ♡
+  </p>
+  <div class="scroll">↓ Keep scrolling ↓</div>
+</div>
 
-  <div class="header">
 
-    <div class="heart">💗</div>
+<div class="section">
 
-    <h1>For My Aishu 🥹</h1>
 
-    <p>
-      Since you clicked that envelope,
-      I guess you're ready for everything
-      I've been wanting to say. ♡
-    </p>
+<!-- HOW I MET YOU -->
 
-    <div class="scroll">
-      ↓ Keep scrolling ↓
-    </div>
+<div class="card">
 
-  </div>
+<div class="number">01 — OUR BEGINNING</div>
 
+<h2>How I Met You 💌</h2>
+
+<div class="story">
+
+<p>If someone had told me that a completely dead group chat would somehow lead me to one of the most unforgettable people in my life, I probably wouldn't have believed them.</p>
+
+<p>We didn't meet in some dramatic way. There was no grand introduction, no long conversation, nothing that would make us think that this person would eventually become such an important part of our lives.</p>
+
+<p>It was just a quiet day in Safe Space, and you randomly started typing the lyrics of a song.</p>
+
+<p>I had noticed you before, honestly. I always thought you had this confidence, boldness and energy that made you stand out, but I was too awkward to actually start a conversation with you.</p>
+
+<p>So when you wrote those lyrics and stopped halfway, I don't even know what made me complete them, but I did. And somehow, that tiny little interaction became our first proper "hello."</p>
+
+<p>You called me baby girl, I called you baby girl back, and that was basically it. 😭</p>
+
+<p>We talked for a few minutes here and there in the GC, nothing too serious, just random little conversations that probably didn't seem important at the time.</p>
+
+<p>Then one day I noticed your friend request, accepted it, and eventually came across your note where you were being way too harsh on yourself.</p>
+
+<p>I remember thinking, "Absolutely not. Who gave you permission to talk about yourself like that?"</p>
+
+<p>So I texted you. I told you that you weren't dumb, that you were actually incredibly smart, and that I genuinely admired your confidence, your boldness and your sassiness.</p>
+
+<p>I don't even think I realized at that point that I was talking to someone who would eventually become such a huge part of my everyday life.</p>
+
+<p>We kept talking, and somehow those little conversations became longer conversations, and longer conversations became us talking about almost everything.</p>
+
+<p>Somewhere along the way, you became someone I could randomly text, someone I could send completely stupid reels to, someone whose notifications I actually looked forward to.</p>
+
+<p>And let me tell you, the reel-spamming journey was NOT easy at first. 😭</p>
+
+<p>I used to overthink everything before sending you something—"What if she doesn't like this? What if I'm annoying her? What if she thinks I'm weird for sending ten reels at once?"—until you basically gave me permission to destroy your DMs with reels.</p>
+
+<p>And after that, there was no going back. 😂</p>
+
+<p>What started as one unfinished song in a dead group chat slowly turned into countless conversations, ridiculous jokes, random arguments, reels, voice notes, emotional moments, and memories that I genuinely wouldn't trade for anything.</p>
+
+<p>And that's probably what makes our story so special to me: we didn't plan to become friends. It just happened.</p>
+
+<p>One random song, one random reply, one random friend request, one random message—and somehow, all those random little moments brought me here, writing this for you on your birthday.</p>
+
+<p>If I could go back to that first day in Safe Space, I don't think I'd change anything.</p>
+
+<p>I'd still complete that song. I'd still reply to you. I'd still send that first DM.</p>
+
+<p>Because I had absolutely no idea that the girl I was too shy to talk to would eventually become the girl whose DMs I'd spam, whose birthday I'd count down to, whose mood I'd worry about, and whose happiness I'd genuinely want to see.</p>
+
+<p>Maybe some friendships don't begin with a big moment. Maybe they begin with something so small that you don't even realize you're witnessing the beginning of something beautiful.</p>
+
+<p>Ours was exactly that.</p>
+
+<p>And honestly, I'm really, really glad I completed those lyrics that day. ❤️</p>
+
+</div>
+</div>
+
+
+<!-- MEMORIES -->
+
+<div class="card">
+
+<div class="number">02 — LITTLE MOMENTS</div>
+
+<h2>Memories With You 📸</h2>
+
+<p>
+If I had to collect every little moment we've had,
+I don't think one scrapbook would ever be enough.
+So here's a tiny collection of the ones I never want to forget. ♡
+</p>
+
+
+<div class="memory">
+<div class="memory-title">🌷 The Most Random Beginning</div>
+<p>
+Sometimes I genuinely think about how random our beginning was. We didn't meet through some dramatic conversation or some huge introduction. We literally met in a dead GC, when neither of us probably expected anything interesting to happen. You started writing the lyrics of a song, stopped halfway, and I somehow decided to complete them. That's literally it. One unfinished lyric, one reply, and then you called me baby girl. I called you baby girl back, and somehow that tiny interaction became the beginning of everything. At that time, I didn't even have the courage to properly approach you because I had already noticed how confident, bold and effortlessly expressive you were. I remember thinking that you were one of those people who could talk to absolutely anyone while I was sitting there overthinking whether I should even send a message. And then, slowly, those five-minute GC conversations became normal conversations, and eventually I found myself actually looking forward to seeing your messages. I still find it crazy that something so small could turn into something I would remember this deeply. 🕊️
+</p>
+</div>
+
+
+<div class="memory">
+<div class="memory-title">💌 The First Time I Actually Came To You</div>
+<p>
+I think one of the biggest turning points was when I saw that note of yours where you were being so unnecessarily mean to yourself. You were calling yourself dumb and putting yourself down, and I remember thinking, excuse me??? who allowed you to talk about my friend like that? So I came into your DMs and started telling you everything I genuinely thought about you. Your confidence, your boldness, your sass, the way you carried yourself, the way you could speak your mind. I don't even think I realised how much that conversation would matter later. We talked, I tried to make you feel better, and somewhere between that conversation and everything that followed, you stopped being just a girl from a GC and became my person to talk to. It wasn't sudden. It just slowly happened. One conversation became another, another became a habit, and suddenly you were someone I could tell random things to without thinking twice. 🌷
+</p>
+</div>
+
+
+<div class="memory">
+<div class="memory-title">📱 The Beginning Of The Reel Terrorism</div>
+<p>
+And then came the era I was terrified of at first: sending you reels. 😭 I remember genuinely overthinking before sending them because I kept wondering whether you'd find me annoying, whether you'd even like the reel, whether I'd send too many, whether you'd think I was some random Instagram spammer. And then you basically gave me permission to spam you, and that was probably the worst decision you ever made because after that there was absolutely no stopping me. 🎀 One reel became five, five became twenty, and eventually I stopped even checking how many I'd sent. It became one of those tiny things that somehow became part of our friendship. Now whenever I see something that reminds me of you, my first thought is basically, yeah, she's getting this.
+</p>
+</div>
+
+
+<div class="memory">
+<div class="memory-title">🌙 The Paragraphs We Wrote While The Other Slept</div>
+<p>
+One of the memories I think I'll always keep is our weird little routine of writing paragraphs when the other person wasn't even awake to read them. There were nights when you would be awake while I was sleeping, writing me these huge paragraphs, and then I'd wake up and find them waiting for me. And then I'd do the exact same thing when you were asleep. It was like we were constantly leaving pieces of our thoughts for each other to find later. 🌙 It sounds so simple, but there's something incredibly comforting about knowing that while you were asleep, someone was awake thinking about you enough to write an entire paragraph—and then knowing that when you woke up, you'd have something waiting for you. Those weren't just messages. They became little time capsules of whatever we were feeling that night.
+</p>
+</div>
+
+
+<div class="memory">
+<div class="memory-title">🫧 The Day I Forced You To Get That Injection</div>
+<p>
+I don't think I'll ever forget the day you were ill and I basically turned into your extremely annoying unpaid doctor. You didn't want to get the injection, and I kept forcing you to do it because apparently I had suddenly decided that your health was my responsibility. 😭 And then, as if I hadn't already annoyed you enough, you didn't talk to me for basically the entire day. I remember being like, okay wow, so this is what I get for caring about you? But looking back, it's honestly one of those memories that makes me smile because it was so ridiculously us. Me being unnecessarily persistent, you getting annoyed with me, and both of us eventually going back to normal. It wasn't some grand romantic moment or anything dramatic. It was just one of those stupid little incidents that somehow became a memory.
+</p>
+</div>
+
+
+<div class="memory">
+<div class="memory-title">🪻 The Jealousy Era</div>
+<p>
+And obviously, we cannot talk about our memories without talking about my jealousy era. There were definitely moments when I'd see you talking to someone else and suddenly I'd be sitting there like, oh, okay, interesting. I wouldn't always say anything directly, but somewhere inside my head I'd already started creating an entire courtroom case. 😭 There were times when you'd give someone else attention and I'd suddenly feel like I needed to appear somewhere in the conversation too. And then there were those absolutely ridiculous moments where I'd jokingly block someone or act like they had committed some unforgivable crime simply because they were getting too comfortable around you. Looking back, it's honestly hilarious because half the time there wasn't even anything serious happening. It was just me being me, getting unnecessarily jealous and then pretending I wasn't jealous at all. But I think those silly moments are part of what made our friendship feel so real. 🕊️
+</p>
+</div>
+
+
+<div class="memory">
+<div class="memory-title">🎀 The Ridiculous Fights That Weren't Really Fights</div>
+<p>
+We've had those moments where something tiny would turn into an argument, and five minutes later neither of us even remembered why we were annoyed. Sometimes you'd say something, I'd take it the wrong way, you'd explain yourself, I'd explain myself, and suddenly we were writing paragraphs again. And somehow even our arguments became memories. There was always this strange comfort in knowing that even when we got annoyed with each other, we'd eventually come back and talk again. We could be dramatic, stubborn, annoying and impossible at the same time, but somehow we'd still find our way back to the conversation.
+</p>
+</div>
+
+
+<div class="memory">
+<div class="memory-title">📖 The Poem That Actually Got Me</div>
+<p>
+And then there was that poem. I genuinely don't think you realise how much that one stayed with me. You wrote this huge poem for me, and somewhere between reading all those words and realising how much thought you'd put into them, you managed to completely win my heart. I'm not even someone who easily knows what to say when people write emotional things for me, but that one genuinely touched me. It became one of those things that I could reread and still remember exactly how I felt the first time I saw it. There are certain words people say that disappear after a few days, and then there are words that somehow stay. Yours stayed. 💌
+</p>
+</div>
+
+
+<div class="memory">
+<div class="memory-title">🕊️ All The Little Versions Of Us</div>
+<p>
+When I think about our friendship, I don't actually think about one single huge moment. I think about hundreds of tiny versions of us. The GC version of us. The DM version. The late-night version. The jealous version. The annoyed version. The reel-spamming version. The paragraph-writing version. The version where one of us was upset and the other tried to fix it. The version where we were laughing over something completely stupid. The version where we weren't even saying anything important but still didn't want the conversation to end. Somehow all those tiny moments became something much bigger than either of us expected.
+</p>
+</div>
+
+
+<div class="memory">
+<div class="memory-title">🌙 And Somehow, Here We Are</div>
+<p>
+It's funny because when we first met, I had absolutely no idea that I'd eventually know so many little things about you. I didn't know I'd remember your random stories, your moods, your weird habits, your favourite things, the things that annoy you, the things that make you happy, the nights you needed someone to talk to, or the mornings when you'd wake up and find paragraphs waiting for you. I didn't know I'd eventually be counting down to your birthday from miles away, trying to figure out how to make one ordinary day feel a little more special for you.
+</p>
+
+<p>
+And maybe that's what I love most about our story. It wasn't planned. It wasn't something either of us sat down and decided to create. It just grew, quietly, through random messages, stupid jokes, reels, arguments, jealousy, poems, paragraphs, apologies, laughter and all the little moments in between. 🪻
+</p>
+
+<p>
+I don't know what the future is going to look like, and I don't know how many more memories we're going to make, but I know that the ones we've already made will always have a little place in my heart. You have been annoying, dramatic, confusing, impossible, sweet, hilarious, emotional and completely yourself—and somehow, through all of it, you've become someone I'll always be grateful that I met.
+</p>
+
+<p>
+From one unfinished lyric in a dead GC to this much history between us... I think that's a pretty beautiful accident. 🌷
+</p>
+
+<p>
+And no matter how many birthdays come after this one, I hope you always remember that somewhere, far away from you, there is someone who genuinely wants to see you happy, who remembers the tiniest things about you, and who will always have a soft spot for the girl who once completed a song lyric in a dead group chat and accidentally became such an important part of her life. 🕊️💌
+</p>
+</div>
+
+</div>
+
+
+<!-- HOW SPECIAL YOU ARE -->
+
+<div class="card">
+
+<div class="number">03 — SOMETHING I WANT YOU TO KNOW</div>
+
+<h2>How Special You Are To Me 🫶</h2>
+
+<div class="special-note">
+You genuinely became one of those people who can make an ordinary day feel different just by being there.
+
+<br><br>
+
+You're important to me in a way that is honestly difficult to explain in one paragraph.
+
+<br><br>
+
+And no matter how many jokes we make, how much we annoy each other, or how chaotic our conversations get, I hope you always remember that you matter to me.
+</div>
+
+</div>
+
+
+<!-- SCREENSHOTS -->
+
+<div class="card">
+
+<div class="number">04 — OUR LITTLE WORLD</div>
+
+<h2>Our Screenshots 📷</h2>
+
+<p>
+And obviously, we need the evidence of all our nonsense. 😭
+</p>
+
+<div class="screenshots">
+
+<div class="photo">
+📸<br><br>
+Screenshot 1
+</div>
+
+<div class="photo">
+📸<br><br>
+Screenshot 2
+</div>
+
+<div class="photo">
+📸<br><br>
+Screenshot 3
+</div>
+
+<div class="photo">
+📸<br><br>
+Screenshot 4
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+
+<div class="ending">
+
+<div class="heart">💗</div>
+
+<h2>Thank You For Being My Aishu ♡</h2>
+
+<p>
+Happy Birthday, Aishu. 
+<br><br>
+I hope this little corner of the internet makes you smile, even just a little.
+</p>
+
+<p>
+Made with way too much love, effort and probably unnecessary amounts of overthinking. 😭💗
+</p>
+
+</div>
+
+</body>
+    </html>
+          
 
   <!-- FOUR SECTIONS -->
 
-  <div class="section">
-
-
-    <!-- 01 — HOW I MET YOU -->
-
-    <div class="card">
-
-      <div class="number">
-        01 — OUR BEGINNING
-      </div>
-
-      <h2>How I Met You 💌</h2>
-
-      <div class="story">
-
-        <p>
-          If someone had told me that a completely dead group chat would somehow lead me to one of the most unforgettable people in my life, I probably wouldn't have believed them.
-        </p>
-
-        <p>
-          We didn't meet in some dramatic way. There was no grand introduction, no long conversation, nothing that would make us think that this person would eventually become such an important part of our lives.
-        </p>
-
-        <p>
-          It was just a quiet day in Safe Space, and you randomly started typing the lyrics of a song.
-        </p>
-
-        <p>
-          I had noticed you before, honestly. I always thought you had this confidence, boldness and energy that made you stand out, but I was too awkward to actually start a conversation with you.
-        </p>
-
-        <p>
-          So when you wrote those lyrics and stopped halfway, I don't even know what made me complete them, but I did. And somehow, that tiny little interaction became our first proper "hello."
-        </p>
-
-        <p>
-          You called me baby girl, I called you baby girl back, and that was basically it. 😭
-        </p>
-
-        <p>
-          We talked for a few minutes here and there in the GC, nothing too serious, just random little conversations that probably didn't seem important at the time.
-        </p>
-
-        <p>
-          Then one day I noticed your friend request, accepted it, and eventually came across your note where you were being way too harsh on yourself.
-        </p>
-
-        <p>
-          I remember thinking, "Absolutely not. Who gave you permission to talk about yourself like that?"
-        </p>
-
-        <p>
-          So I texted you. I told you that you weren't dumb, that you were actually incredibly smart, and that I genuinely admired your confidence, your boldness and your sassiness.
-        </p>
-
-        <p>
-          I don't even think I realized at that point that I was talking to someone who would eventually become such a huge part of my everyday life.
-        </p>
-
-        <p>
-          We kept talking, and somehow those little conversations became longer conversations, and longer conversations became us talking about almost everything.
-        </p>
-
-        <p>
-          Somewhere along the way, you became someone I could randomly text, someone I could send completely stupid reels to, someone whose notifications I actually looked forward to.
-        </p>
-
-        <p>
-          And let me tell you, the reel-spamming journey was NOT easy at first. 😭
-        </p>
-
-        <p>
-          I used to overthink everything before sending you something—"What if she doesn't like this? What if I'm annoying her? What if she thinks I'm weird for sending ten reels at once?"—until you basically gave me permission to destroy your DMs with reels.
-        </p>
-
-        <p>
-          And after that, there was no going back. 😂
-        </p>
-
-        <p>
-          What started as one unfinished song in a dead group chat slowly turned into countless conversations, ridiculous jokes, random arguments, reels, voice notes, emotional moments, and memories that I genuinely wouldn't trade for anything.
-        </p>
-
-        <p>
-          And that's probably what makes our story so special to me: we didn't plan to become friends. It just happened.
-        </p>
-
-        <p>
-          One random song, one random reply, one random friend request, one random message—and somehow, all those random little moments brought me here, writing this for you on your birthday.
-        </p>
-
-        <p>
-          If I could go back to that first day in Safe Space, I don't think I'd change anything.
-        </p>
-
-        <p>
-          I'd still complete that song. I'd still reply to you. I'd still send that first DM.
-        </p>
-
-        <p>
-          Because I had absolutely no idea that the girl I was too shy to talk to would eventually become the girl whose DMs I'd spam, whose birthday I'd count down to, whose mood I'd worry about, and whose happiness I'd genuinely want to see.
-        </p>
-
-        <p>
-          Maybe some friendships don't begin with a big moment. Maybe they begin with something so small that you don't even realize you're witnessing the beginning of something beautiful.
-        </p>
-
-        <p>
-          Ours was exactly that.
-        </p>
-
-        <p>
-          And honestly, I'm really, really glad I completed those lyrics that day. ❤️
-        </p>
-
-      </div>
-
-    </div>
-
-
-    <!-- 02 — MEMORIES -->
-
-    <div class="card">
-
-      <div class="number">
-        02 — LITTLE MOMENTS
-      </div>
-
-      <h2>Memories With You 📸</h2>
-
-      <p>
-        Some moments are completely random,
-        but somehow they become the ones
-        you remember the most.
-      </p>
-
-      <div class="memory">
-        <span>😭</span>
-        <p>
-          Our random conversations,
-          stupid jokes, late-night talks
-          and all the nonsense in between.
-        </p>
-      </div>
-
-      <div class="memory">
-        <span>😂</span>
-        <p>
-          The moments where neither of us
-          was making any sense whatsoever.
-        </p>
-      </div>
-
-      <div class="memory">
-        <span>🫶</span>
-        <p>
-          And all those tiny moments that
-          quietly became memories.
-        </p>
-      </div>
-
-    </div>
-
-
-    <!-- 03 — SPECIAL -->
-
-    <div class="card">
-
-      <div class="number">
-        03 — SOMETHING I WANT YOU TO KNOW
-      </div>
-
-      <h2>How Special You Are To Me 🫶</h2>
-
-      <div class="special-note">
-
-        You genuinely became one of those
-        people who can make an ordinary day
-        feel different just by being there.
-
-        <br><br>
-
-        You're important to me in a way that
-        is honestly difficult to explain in one
-        paragraph.
-
-        <br><br>
-
-        And no matter how many jokes we make,
-        how much we annoy each other,
-        or how chaotic our conversations get,
-        I hope you always remember that
-        you matter to me.
-
-      </div>
-
-    </div>
-
-
-    <!-- 04 — SCREENSHOTS -->
-
-    <div class="card">
-
-      <div class="number">
-        04 — OUR LITTLE WORLD
-      </div>
-
-      <h2>Our Screenshots 📷</h2>
-
-      <p>
-        And obviously, we need the evidence
-        of all our nonsense. 😭
-      </p>
-
-      <div class="screenshots">
-
-        <div class="photo">
-          📸<br><br>
-          Screenshot 1
-        </div>
-
-        <div class="photo">
-          📸<br><br>
-          Screenshot 2
-        </div>
-
-        <div class="photo">
-          📸<br><br>
-          Screenshot 3
-        </div>
-
-        <div class="photo">
-          📸<br><br>
-          Screenshot 4
-        </div>
-
-      </div>
-
-    </div>
-
-  </div>
-
-
-  <!-- END -->
-
-  <div class="ending">
-
-    <div class="heart">💗</div>
-
-    <h2>Thank You For Being My Aishu ♡</h2>
-
-    <p>
-      Happy Birthday, Aishu. 🥹
-      <br><br>
-      I hope this little corner of the internet
-      makes you smile, even just a little.
-    </p>
-
-    <p>
-      Made with way too much love,
-      effort and probably unnecessary
-      amounts of overthinking. 😭💗
-    </p>
-
-  </div>
-
-</body>
-</html>
+                    
